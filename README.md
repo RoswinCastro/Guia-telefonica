@@ -23,7 +23,7 @@ Este proyecto es una aplicación de guía telefónica que utiliza Node.js, Expre
 
 ## Configuración de la base de datos
 - Abre XAMPP y asegúrate de que el servidor MySQL y el Apache esté activo.
-- Importar base de datos (Descarga desde el repositorio)
+- Importar base de datos en el phpMyAdmin (Descargar desde el repositorio). Tener en cuenta de que al importar primero se creará la base de datos, pero sin las tablas, luego seleccione la tabla y vuelva a importar la misma base de datos.
 - Modifica los detalles de conexión a la base de datos en el archivo `app.js` según sea necesario. Puedes encontrar la sección marcada como "MODIFICAR DATOS DE SER NECESARIO".
 
 ## Uso
