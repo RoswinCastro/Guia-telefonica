@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `guia_telefonica_final`
 --
-CREATE DATABASE  guia_telefonica_final;
+CREATE DATABASE IF NOT EXISTS guia_telefonica_final;
 -- --------------------------------------------------------
 
 --
