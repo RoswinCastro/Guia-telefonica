@@ -22,7 +22,7 @@ Este proyecto es una aplicación de guía telefónica que utiliza Node.js, Expre
     ```
 
 ## Configuración de la base de datos
-- Abre XAMPP y asegúrate de que el servidor MySQL y el Apache esté activo.
+- Abre XAMPP y asegúrate de que el servidor MySQL y el Apache estén activo.
 - Importar base de datos en el phpMyAdmin (Descargar desde el repositorio "guia_telefonica_final.sql"). Tener en cuenta de que al importar primero se creará la base de datos, pero sin las tablas, luego seleccione la tabla y vuelva a importar la misma base de datos.
 - Modifica los detalles de conexión a la base de datos en el archivo `app.js` según sea necesario. Puedes encontrar la sección marcada como "MODIFICAR DATOS DE SER NECESARIO".
 
@@ -39,3 +39,5 @@ Este proyecto es una aplicación de guía telefónica que utiliza Node.js, Expre
 Nota: La funcionalidad de actualización y eliminación de datos aún no está implementada en la interfaz web, pero puedes realizar estas acciones directamente en la base de datos según sea necesario.
 
 ¡Disfruta utilizando la Guía Telefónica! Si tienes alguna pregunta o encuentras algún problema, no dudes en ponerte en contacto con el equipo de desarrollo.
+
+LAMENTABLEMENTE NO ENCONTRÉ DONDE DESPLEGAR DICHO TRABAJO, POR LO TANTO SOLO PUEDO PROPORCIONAR LO QUE HICE DESDE UN LOCALHOST.
