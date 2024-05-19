@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia telefonica</title>
+</head>
+<body>
+    <h1>GUIA TELEFONICA</h1>
+    
+    <h2>Agregar Empresa</h2>
+    <form id="form-empresa" action="/empresas" method="POST">
+        <label for="nombre_empresa">Nombre:</label>
+        <input type="text" id="nombre_empresa" name="Nombre" required>
+        <label for="correo_empresa">Correo:</label>
+        <input type="email" id="correo_empresa" name="Correo" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+
+    <h2>Agregar Departamento</h2>
+    <form id="form-departamento" action="/departamentos" method="POST">
+        <label for="nombre_departamento">Nombre:</label>
+        <input type="text" id="nombre_departamento" name="Nombre" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+    <h2>Agregar Zona</h2>
+    <form id="form-zona" action="/zonas" method="POST">
+        <label for="nombre_zona">Nombre:</label>
+        <input type="text" id="nombre_zona" name="Nombre" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+    <h2>Agregar Municipio</h2>
+    <form id="form-municipio" action="/municipios" method="POST">
+        <label for="nombre_municipio">Nombre:</label>
+        <input type="text" id="nombre_municipio" name="Nombre" required>
+        <label for="codigo_departamento">Código Departamento:</label>
+        <input type="number" id="codigo_departamento" name="Codigo_Departamento" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+    <h2>Agregar Lugar</h2>
+    <form id="form-lugar" action="/lugares" method="POST">
+        <label for="codigo_empresa_lugar">Código Empresa:</label>
+        <input type="number" id="codigo_empresa_lugar" name="Codigo_Empresa" required>
+        <label for="codigo_zona_lugar">Código Zona:</label>
+        <input type="number" id="codigo_zona_lugar" name="Codigo_Zona" required>
+        <label for="codigo_departamento_lugar">Código Departamento:</label>
+        <input type="number" id="codigo_departamento_lugar" name="Codigo_Departamento" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+
+    <h2>Agregar Teléfono</h2>
+    <form id="form-telefono" action="/telefonos" method="POST">
+        <label for="codigo_empresa_telefono">Código Empresa:</label>
+        <input type="number" id="codigo_empresa_telefono" name="Codigo_Empresa" required>
+        <label for="telefono_empresa">Teléfono:</label>
+        <input type="tel" id="telefono_empresa" name="Telefono" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+ <h2>-------- Actualizar Datos  "no terminado"  --------</h2>
+ <h2>-------- Eliminar Datos  "no terminado - Tendrá que eliminar directamente en la base de datos"  --------</h2>
+ 
+
+
+    <h2>Datos de la guia telefonica</h2>
+    <button id="btn-mostrar" type="button">Mostrar Todos los Datos</button>
+
+    
+    <h2>Datos encontrados</h2>
+    <table id="tabla-datos">
+
+    </table>
+
+    <script>
+        document.getElementById('btn-mostrar').addEventListener('click', function() {
+            fetch('/mostrar')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('tabla-datos');
+                    table.innerHTML = '';
+                    
+                    for (const tabla in data) {
+                        const datos = data[tabla];
+                        if (datos.length > 0) {
+                            const thead = `<thead><tr>${Object.keys(datos[0]).map(key => `<th>${key}</th>`).join('')}</tr></thead>`;
+                            const tbody = `<tbody>${datos.map(fila => `<tr>${Object.values(fila).map(valor => `<td>${valor || 'vacio'}</td>`).join('')}</tr>`).join('')}</tbody>`;
+                            table.innerHTML += `<tr><td colspan="${Object.keys(datos[0]).length}"><h3>${tabla}</h3><table>${thead}${tbody}</table></td></tr>`;
+                        } else {
+                            table.innerHTML += `<tr><td colspan="2"><h3>${tabla}</h3>vacio</td></tr>`;
+                        }
+                    }
+                })
+                .catch(error => console.error('Error al obtener los datos:', error));
+        });
+    </script>
+</body>
+</html>

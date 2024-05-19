@@ -1,0 +1,13 @@
+# Ignorar archivos temporales creados por el sistema operativo
+.DS_Store
+
+# Ignorar archivos generados por IDEs o editores de texto
+.vscode/
+.idea/
+
+# Ignorar archivos de dependencias de Node.js
+node_modules/
+
+# Ignorar archivos generados durante la compilación o ejecución
+/build/
+/dist/
