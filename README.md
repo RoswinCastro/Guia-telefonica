@@ -3,7 +3,7 @@
 Este proyecto es una aplicación de guía telefónica que utiliza Node.js, Express.js y MySQL para proporcionar servicios de gestión de datos relacionados con empresas, departamentos, municipios, lugares, teléfonos y zonas.
 
 ## Requisitos previos
-- Node.js instalado en tu sistema. Puedes descargarlo [aquí](https://nodejs.org/).
+- Node.js instalado en tu sistema. Puedes descargarlo [aquí](https://nodejs.org/). - RECOMENDADO -
 - MySQL Server instalado y configurado localmente. Puedes descargarlo [aquí](https://www.mysql.com/).
 - XAMPP instalado en tu sistema. Puedes descargarlo [aquí](https://www.apachefriends.org/index.html). - RECOMENDADO -
 
