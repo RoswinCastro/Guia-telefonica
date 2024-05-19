@@ -1,7 +1,11 @@
+# Guía Telefónica
+
+Este proyecto es una aplicación de guía telefónica que utiliza Node.js, Express.js y MySQL para proporcionar servicios de gestión de datos relacionados con empresas, departamentos, municipios, lugares, teléfonos y zonas.
+
 ## Requisitos previos
 - Node.js instalado en tu sistema. Puedes descargarlo [aquí](https://nodejs.org/).
 - MySQL Server instalado y configurado localmente. Puedes descargarlo [aquí](https://www.mysql.com/).
-- XAMPP instalado en tu sistema. Puedes descargarlo [aquí](https://www.apachefriends.org/index.html).
+- XAMPP instalado en tu sistema. Puedes descargarlo [aquí](https://www.apachefriends.org/index.html). - RECOMENDADO -
 
 ## Instalación
 1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
@@ -18,8 +22,8 @@
     ```
 
 ## Configuración de la base de datos
-- Abre XAMPP y asegúrate de que el servidor MySQL esté activo.
-- Ejecuta el script SQL proporcionado en el archivo `database.sql` para crear la base de datos y las tablas necesarias.
+- Abre XAMPP y asegúrate de que el servidor MySQL y el Apache esté activo.
+- Importar base de datos (Descarga desde el repositorio)
 - Modifica los detalles de conexión a la base de datos en el archivo `app.js` según sea necesario. Puedes encontrar la sección marcada como "MODIFICAR DATOS DE SER NECESARIO".
 
 ## Uso
@@ -35,4 +39,3 @@
 Nota: La funcionalidad de actualización y eliminación de datos aún no está implementada en la interfaz web, pero puedes realizar estas acciones directamente en la base de datos según sea necesario.
 
 ¡Disfruta utilizando la Guía Telefónica! Si tienes alguna pregunta o encuentras algún problema, no dudes en ponerte en contacto con el equipo de desarrollo.
-
